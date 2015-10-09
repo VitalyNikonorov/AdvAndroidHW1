@@ -13,7 +13,7 @@ public class ActivitySplash extends Activity {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        
+
         Launcher launcher = new Launcher();
         launcher.start();
 
@@ -29,6 +29,7 @@ public class ActivitySplash extends Activity {
             }
             Intent intent = new Intent(ActivitySplash.this, ActivityList.class);
             startActivity(intent);
+            ActivitySplash.this.finish();
         }
     }
 }

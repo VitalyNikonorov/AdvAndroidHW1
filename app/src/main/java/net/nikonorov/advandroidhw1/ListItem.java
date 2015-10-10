@@ -5,17 +5,17 @@ package net.nikonorov.advandroidhw1;
  */
 public class ListItem {
     private String caption;
-    private String color;
+    private int color;
 
     public String getCaption() {
         return caption;
     }
 
-    public String getColor() {
+    public int getColor() {
         return color;
     }
 
-    public ListItem(String caption, String color) {
+    public ListItem(String caption, int color) {
         this.caption = caption;
         this.color = color;
     }

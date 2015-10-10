@@ -21,9 +21,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cv_tv"
-            android:textSize="30sp"
+            android:textSize="24sp"
             android:textColor="@color/colorAccent"
             android:layout_gravity="center"
+            android:paddingRight="16dp"
             android:text="text" />
 
     </LinearLayout>

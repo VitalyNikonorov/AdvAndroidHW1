@@ -38,9 +38,42 @@ public class ActivityList extends AppCompatActivity {
         list = new ArrayList<>();
         for (int i = 0; i < 1000; i++){
             int color = (i%2 == 1) ? Color.parseColor("#aaaaaa") : Color.parseColor("#ffffff");
-            list.add(new ListItem(new Integer(i + 1).toString(), color));
+            list.add(new ListItem(intToStr(i + 1), color));
         }
     }
 
+    private String intToStr(int i){
+        String[] hundreds = {" ", "сто ", "двести ", "триста ", "четыреста ", "пятьсот ", "шестьсот ", "семьсот ", "восесьсот ", "девятьсот "};
+        String[] decades = {" "," ", "двадцать ", "тридцать ", "сорок ", "пятьдесят ", "шестьдесят ", "семьдесят ", "восемьдесят ", "девяносто "};
+        String[] units = {" ", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"};
+        String[] firstDecade = {"десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятьнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать"};
+
+        String result = "";
+        String unit = "";
+        String decade = "";
+        String hundred = "";
+
+        if (i / 1000 != 1){
+            hundred = hundreds[i / 100];
+        }else{
+            result = "одна тысяча";
+        }
+
+        if ( (i / 10) % 10 == 1 ){
+            decade = firstDecade[i % 10];
+        }else{
+            decade = decades[(i / 10) % 10];
+            unit = units[i % 10];
+        }
+
+        result = new StringBuilder()
+                .append(result)
+                .append(hundred)
+                .append(decade)
+                .append(unit)
+                .toString();
+
+        return result;
+    }
 
 }

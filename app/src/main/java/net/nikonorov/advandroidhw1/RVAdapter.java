@@ -41,7 +41,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.CardViewHolder> {
     @Override
     public void onBindViewHolder(CardViewHolder holder, int position) {
         holder.tv.setText(list.get(position).getCaption());
-        holder.cv.setBackgroundColor(list.get(position).getColor());
+        holder.cv.setCardBackgroundColor(list.get(position).getColor());
     }
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {

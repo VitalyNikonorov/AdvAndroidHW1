@@ -11,7 +11,7 @@ import android.view.ViewDebug;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
+/***
  * Created by Vitaly on 09.10.15.
  */
 public class ActivityList extends AppCompatActivity {

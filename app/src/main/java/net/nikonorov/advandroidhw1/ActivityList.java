@@ -3,6 +3,7 @@ package net.nikonorov.advandroidhw1;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,7 +31,6 @@ public class ActivityList extends AppCompatActivity {
         rv.setLayoutManager(llm);
 
         initList();
-
         RVAdapter rvAdapter = new RVAdapter(list);
         rv.setAdapter(rvAdapter);
     }

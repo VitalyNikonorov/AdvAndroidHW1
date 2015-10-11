@@ -13,10 +13,8 @@ public class ActivitySplash extends Activity {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
         Launcher launcher = new Launcher();
         launcher.start();
-
     }
 
     private class Launcher extends Thread{

@@ -1,5 +1,6 @@
 package net.nikonorov.advandroidhw1;
 
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -43,10 +44,11 @@ public class ActivityList extends AppCompatActivity {
     }
 
     private String intToStr(int i){
-        String[] hundreds = {" ", "сто ", "двести ", "триста ", "четыреста ", "пятьсот ", "шестьсот ", "семьсот ", "восесьсот ", "девятьсот "};
-        String[] decades = {" "," ", "двадцать ", "тридцать ", "сорок ", "пятьдесят ", "шестьдесят ", "семьдесят ", "восемьдесят ", "девяносто "};
-        String[] units = {" ", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"};
-        String[] firstDecade = {"десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятьнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать"};
+        Resources res = getResources();
+        String[] hundreds = res.getStringArray(R.array.its_hundreds);
+        String[] decades = res.getStringArray(R.array.its_decades);
+        String[] units = res.getStringArray(R.array.its_units);
+        String[] firstDecade = res.getStringArray(R.array.its_first_decade);
 
         String result = "";
         String unit = "";
@@ -54,15 +56,15 @@ public class ActivityList extends AppCompatActivity {
         String hundred = "";
 
         if (i / 1000 != 1){
-            hundred = hundreds[i / 100];
+            hundred = hundreds[i / 100] + " ";
         }else{
-            result = "одна тысяча";
+            result = getString(R.string.hundred);
         }
 
         if ( (i / 10) % 10 == 1 ){
             decade = firstDecade[i % 10];
         }else{
-            decade = decades[(i / 10) % 10];
+            decade = decades[(i / 10) % 10] + " ";
             unit = units[i % 10];
         }
 

@@ -1,4 +1,60 @@
 <resources>
     <string name="app_name">AdvAndroidHW1</string>
     <string name="titleListActivity">Homework 1</string>
+
+    <string name="hundred">одна тысяча</string>
+
+    <string-array name="its_hundreds">
+        <item></item>
+        <item>сто</item>
+        <item>двести</item>
+        <item>триста</item>
+        <item>четыреста</item>
+        <item>пятьсот</item>
+        <item>шестьсот</item>
+        <item>семьсот</item>
+        <item>восемьсот</item>
+        <item>девятьсот</item>
+    </string-array>
+
+    <string-array name="its_decades">
+        <item></item>
+        <item></item>
+        <item>двадцать</item>
+        <item>тридцать</item>
+        <item>сорок</item>
+        <item>пятьдесят</item>
+        <item>шестьдесят</item>
+        <item>семьдесят</item>
+        <item>восемьдесят</item>
+        <item>девяносто</item>
+    </string-array>
+
+    <string-array name="its_units">
+        <item></item>
+        <item>один</item>
+        <item>два</item>
+        <item>три</item>
+        <item>четыре</item>
+        <item>пять</item>
+        <item>шесть</item>
+        <item>семь</item>
+        <item>восемь</item>
+        <item>девять</item>
+    </string-array>
+
+    <string-array name="its_first_decade">
+        <item>десять</item>
+        <item>одиннадцать</item>
+        <item>двенадцать</item>
+        <item>тринадцать</item>
+        <item>четырнадцать</item>
+        <item>пятнадцать</item>
+        <item>шестнадцать</item>
+        <item>семнадцать</item>
+        <item>восемнадцать</item>
+        <item>девятнадцать</item>
+    </string-array>
+
+
 </resources>

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by vitaly on 09.10.15.
+ * Created by Vitaly on 09.10.15.
  */
 public class ActivityList extends AppCompatActivity {
 

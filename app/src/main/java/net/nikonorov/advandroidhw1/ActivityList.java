@@ -3,11 +3,9 @@ package net.nikonorov.advandroidhw1;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.ViewDebug;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,4 +76,7 @@ public class ActivityList extends AppCompatActivity {
         return result;
     }
 
+    public List<ListItem> getList() {
+        return list;
+    }
 }

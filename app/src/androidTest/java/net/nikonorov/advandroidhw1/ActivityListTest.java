@@ -19,7 +19,7 @@ import static org.junit.Assert.assertEquals;
  * Created by vitaly on 11.10.15.
  */
 
-/*
+
 @RunWith(AndroidJUnit4.class)
 public class ActivityListTest {
     @Rule
@@ -41,14 +41,18 @@ public class ActivityListTest {
                 public void run() {
 
                     List<ListItem> list = activityList.getList();
-                    int trueColor = Color.parseColor("#ffffff");
-                    int itemColor = list.get(1).getColor();
-
-                    assertEquals(itemColor, trueColor);
+                    for (int idx = 0; idx < list.size(); ++idx) {
+                        if (idx % 2 == 1) {
+                            assertEquals(Color.parseColor("#aaaaaa"), list.get(idx).getColor());
+                        }
+                        else {
+                            assertEquals(Color.parseColor("#ffffff"), list.get(idx).getColor());
+                        }
+                    }
 
                 } });
         } catch (InterruptedException e) {
             Assert.assertTrue("Interrupted exception", false);
         }
     }
-}*/
+}
